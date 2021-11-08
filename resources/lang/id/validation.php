@@ -155,7 +155,8 @@ return [
 
     'attributes' => [
         'destination' => 'Penerima',
-        'content' => 'Isi Pesan'
+        'content' => 'Isi Pesan',
+        'channel' => 'Saluran',
     ],
 
 ];

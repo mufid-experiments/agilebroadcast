@@ -18,4 +18,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/broadcasts', [BroadcastsController::class, 'index']);
+Route::resource('broadcasts', BroadcastsController::class);
