@@ -31,5 +31,9 @@ cd ..
 curl -s "https://laravel.build/example-app" | bash
 
 cd example-app
-./vendor/bin/sail up
+git init .
+git remote add origin git@github.com:mufid-experiments/agilebroadcast.git
+git fetch --all
+git reset --hard origin/master
 
+./vendor/bin/sail up
