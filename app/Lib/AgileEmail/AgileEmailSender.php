@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Lib\AgileSMS;
+namespace App\Lib\AgileEmail;
 
 class AgileEmailSender
 {

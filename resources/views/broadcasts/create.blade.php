@@ -50,22 +50,22 @@
                                     <label class="form-label col-3 col-form-label">Saluran</label>
                                     <div class="form-selectgroup form-selectgroup-boxes d-flex flex-column col">
                                       <label class="form-selectgroup-item flex-fill">
-                                        <input type="radio" name="channel" value="sms" class="form-selectgroup-input" {{ old('channel') == 'sms' ? "checked=checked" : "" }} >
+                                        <input type="radio" name="channel" value="sms" class="form-selectgroup-input" {{ old('channel') == 'email' ? "checked=checked" : "" }} >
                                         <div class="form-selectgroup-label d-flex align-items-center p-3">
                                           <div class="me-3">
                                             <span class="form-selectgroup-check"></span>
                                           </div>
-                                          <div>SMS</div>
+                                          <div>Email</div>
                                         </div>
                                       </label>
                                       <label class="form-selectgroup-item flex-fill">
-                                        <input type="radio" name="channel" value="email" class="form-selectgroup-input" {{ old('channel') == 'email' ? "checked=checked" : "" }} >
+                                        <input type="radio" name="channel" value="email" class="form-selectgroup-input" {{ old('channel') == 'sms' ? "checked=checked" : "" }} >
                                         <div class="form-selectgroup-label d-flex align-items-center p-3">
                                           <div class="me-3">
                                             <span class="form-selectgroup-check"></span>
                                           </div>
                                           <div>
-                                            Email
+                                            SMS
                                           </div>
                                         </div>
                                       </label>

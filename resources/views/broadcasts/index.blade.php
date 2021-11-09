@@ -12,7 +12,7 @@
                     <div class="card card-lg">
                         <div class="card-body">
                             <div class=markdown>
-                                <h1>Hi</h1>
+                                <h1>Halo, selamat datang.</h1>
                             </div>
                         </div>
                     </div>
