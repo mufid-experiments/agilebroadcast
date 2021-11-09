@@ -27,8 +27,13 @@ class BroadcastsController extends BaseController
         ]);
         
         $broadcast = Broadcast::create($fields);
+        $broadcast->process();
         
         return redirect()->route('broadcasts.show', [$broadcast->id]);
+    }
+    
+    public function show() {
+        return view('broadcasts.show');
     }
 
 }

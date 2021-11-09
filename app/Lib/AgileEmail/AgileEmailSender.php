@@ -2,12 +2,12 @@
 
 namespace App\Lib\AgileSMS;
 
-class AgileSMSSender
+class AgileEmailSender
 {
-    public static function send($phoneNumber, $content) {
+    public static function send($emailAddress, $content) {
         $postdata = http_build_query(
             array(
-                'phone_number' => $phoneNumber,
+                'email_address' => $emailAddress,
                 'content' => $content
             )
         );
@@ -21,6 +21,6 @@ class AgileSMSSender
         );
         
         $context  = stream_context_create($opts);
-        $result = file_get_contents('https://agilesender.herokuapp.com/sms', false, $context);
+        $result = file_get_contents('https://agilesender.herokuapp.com/email', false, $context);
     }
 }
