@@ -2,8 +2,8 @@
 
 sudo apt-get update
 
-sudo apt remove apache2
-sudo apt remove mysql-server
+sudo apt remove -y apache2
+sudo apt remove -y mysql-server
 sudo apt autoremove -y
 
 sudo apt-get install -y \
