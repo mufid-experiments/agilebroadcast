@@ -1,8 +1,10 @@
 <?php
 
-namespace App\Lib\AgileSMS;
+namespace App\Lib\MessageSender\AgileSMS;
 
-class AgileSMSSender
+use App\Lib\IMessageSender;
+
+class AgileSMSSender implements IMessageSender;
 {
     public static function send($phoneNumber, $content) {
         $postdata = http_build_query(

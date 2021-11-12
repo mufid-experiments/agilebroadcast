@@ -3,6 +3,17 @@
         SangPemberitahu
     </x-slot>
     
+    <x-broadcasts.pagewithsidebar activeMenu="index">
+    </x-broadcasts.pagewithsidebar>
+
+    <x-broadcasts.pagewithsidebar activeMenu="create">
+        <h1>
+            Ini adalah kotak ke-2 yang dibuat
+            dengan design pattern Component
+            milik Laravel
+        </h1>
+    </x-broadcasts.pagewithsidebar>
+    
     <div class="page-body">
         <div class="container-xl">
             <div class="row gx-lg-4">

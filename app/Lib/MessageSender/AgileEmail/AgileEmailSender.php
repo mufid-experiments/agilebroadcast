@@ -1,13 +1,15 @@
 <?php
 
-namespace App\Lib\AgileMading;
+namespace App\Lib\MessageSender\AgileEmail;
 
-class AgileMadingSender
+use App\Lib\MessageSender\IMessageSender;
+
+class AgileEmailSender implements IMessageSender
 {
-    public static function send($phoneNumber, $content) {
+    public static function send($emailAddress, $content) {
         $postdata = http_build_query(
             array(
-                'phone_number' => $phoneNumber,
+                'email_address' => $emailAddress,
                 'content' => $content
             )
         );
@@ -21,6 +23,6 @@ class AgileMadingSender
         );
         
         $context  = stream_context_create($opts);
-        $result = file_get_contents('https://agilemading.herokuapp.com/new', false, $context);
+        $result = file_get_contents('https://agilesender.herokuapp.com/email', false, $context);
     }
 }

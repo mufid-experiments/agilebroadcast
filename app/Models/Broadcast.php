@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Lib\AgileEmail\AgileEmailSender;
+use App\Lib\AgileEmail\AgileSMSSender;
 
 class Broadcast extends Model
 {
@@ -13,10 +14,9 @@ class Broadcast extends Model
     protected $fillable = ['content', 'destination', 'channel'];
     
     public function process() {
-        if ($this->channel == 'email') {
-            AgileEmailSender::send($this->destination, $this->content);
-        } else {
-            exit("Error: unknown channel");
-        }
+        $channel = $this->channel;
+        $message = $this->content;
+        
+        SenderFactory::send($channel, $destination, $message);
     }
 }
