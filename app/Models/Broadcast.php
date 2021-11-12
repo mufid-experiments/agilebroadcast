@@ -17,6 +17,7 @@ class Broadcast extends Model
         $channel = $this->channel;
         $message = $this->content;
         
-        SenderFactory::send($channel, $destination, $message);
+        $processor = new MessageProcessor;
+        send($channel, $destination, $message);
     }
 }
